@@ -28,6 +28,7 @@
     </ion-col>
   </ion-row>
   <ion-row>
+<<<<<<< HEAD
     <ion-label id="saldo">
       Saldo: {{ saldoFormatted() }}
     </ion-label>
@@ -38,10 +39,32 @@
         <ion-icon name="bus" slot="start" [style.color]="route.color"></ion-icon>
         <ion-label class="label-route-item">
           {{ route.from }} - {{ route.to }}
+=======
+    <ion-label id="saldo_disponible">
+      $$$$
+    </ion-label>
+  </ion-row>
+  <ion-row>
+    <ion-list id="rutas_disponibles">
+      <ion-item>
+        <ion-label>
+          Garcia - MTY
+        </ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-label>
+          Santa catarina - MTY
+        </ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-label>
+          San Pedro - MTY
+>>>>>>> 568559c4c3f9e69fe0504cf396ba50fb047c77a0
         </ion-label>
       </ion-item>
     </ion-list>
   </ion-row>
+<<<<<<< HEAD
   <ion-row id="ultimo-pasaje-row">
     <ion-col>
       <ion-label id="ultimo-pasaje">Ultimo pasaje: </ion-label>
@@ -58,6 +81,12 @@
       <ion-label id="costo-ultimo-pasaje">{{ getLastTravelCost("user_001") | currency:'MXN':'symbol':'1.2-2' }}</ion-label>
       </ion-row> 
     </ion-col>  
+=======
+  <ion-row>
+
+      <ion-label id="ultimo_pasaje">Ultimo pasaje: $$$$</ion-label>
+
+>>>>>>> 568559c4c3f9e69fe0504cf396ba50fb047c77a0
   </ion-row>
 </ion-col>
 </ion-content>
