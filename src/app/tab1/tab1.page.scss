@@ -24,3 +24,38 @@ ion-column {
   width: 100%;
   height: auto;
 }
+
+#saldo, #ultimo-pasaje {
+  font-size: 24px;
+  font-weight: bold;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 8px;
+}
+
+#ultimo-pasaje {
+  margin-top: 16px;
+}
+
+#rutas {
+  max-height: 240px; // Altura aproximada para 4 elementos
+  overflow-y: auto;  // Activar scroll vertical
+  width: 100%;
+}
+
+.label-route-item {
+  font-size: 18px;
+  margin-left: auto;
+  margin-right: auto; 
+}
+.route-item {
+  height: 80px;
+}
+
+#ultimo-pasaje-row {
+  font-size: 20px;
+  font-weight: bold;
+  margin-top: 32px;
+  margin-left: auto;
+  margin-right: auto;
+}

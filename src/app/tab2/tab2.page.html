@@ -1,17 +1,59 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Tab 2
-    </ion-title>
+      Bioruta
+     </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 2</ion-title>
-    </ion-toolbar>
-  </ion-header>
+  <ion-col >
+    <ion-row>
+      <ion-button id="regresar" href="/tabs/tab1">
+        Regresar
+      </ion-button>
+    </ion-row>
+    
+    <ion-row>
+      <ion-label>
+        ¿Cuánto quieres recargar?
+      </ion-label>
+    </ion-row>
+    
+    <ion-row>
+      <ion-item>
+        <ion-input 
+          type="number" 
+          placeholder="Ingresa el monto" 
+          [(ngModel)]="montoRecarga"
+          shape="round">
+        </ion-input>
+      </ion-item>
+    </ion-row>
+    
+    <ion-row>
+      <ion-label>
+        Mínimo de recarga: 20
+      </ion-label>
+    </ion-row>
+    
+    <ion-row>
+      <ion-label>
+        Máximo de recarga: 300
+      </ion-label>
+    </ion-row>
+    
+    <ion-row>
+      <ion-label>
+        Máximo recarga diaria: 300
+      </ion-label>
+    </ion-row>
+    
+    <ion-row>
+      <ion-button id="btnRecargar" (click)="recargar()">
+        Recargar
+      </ion-button>
+    </ion-row>
+  </ion-col>
 
-  <app-explore-container name="Tab 2 page"></app-explore-container>
 </ion-content>
