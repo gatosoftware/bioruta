@@ -13,6 +13,22 @@
         Regresar
       </ion-button>
     </ion-row>
+
+    <ion-col *ngFor="let travel of getTravelHistory()">
+      <ion-row id="detalle-ultimo-pasaje">
+      
+      <ion-label class="label-route-item">
+        <ion-icon name="bus" slot="start" [style.color]="travel.color"></ion-icon>
+        {{ travel.from }} - {{ travel.to }}
+      </ion-label>
+      </ion-row>
+      <ion-row>
+      <ion-label id="costo-ultimo-pasaje">{{ travel.amount | currency:'MXN':'symbol':'1.2-2' }}</ion-label>
+      <ion-label id="fecha-ultimo-pasaje">Fecha: {{ travel.date | date:'shortDate' }}</ion-label>
+      </ion-row> 
+    </ion-col>  
+
+
   </ion-col>
 
 </ion-content>

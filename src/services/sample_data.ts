@@ -16,6 +16,7 @@ export interface ConsumptionData {
     currency: string;
     lastTravelRoute: { from: string; to: string ; color: string };
     routes: { from: string; to: string ; color: string }[];
+    travelHistory: { from: string; to: string ; color: string; amount: number; date: Date }[];
 }
 
 // Simulated data for pending consumption balance
@@ -34,7 +35,11 @@ const mockConsumptionData: ConsumptionData[] = [
             { from: "Sta Catarina", to: "Saltillo", color: "purple" },
         ],
         lastTravelRoute: { from: "MTY", to: "Saltillo", color: "white" },
-
+        travelHistory: [
+            { from: "Garcia", to: "MTY", color: "red", amount: 10.00, date: new Date('2024-06-01') },
+            { from: "MTY", to: "Saltillo", color: "blue", amount: 12.50, date: new Date('2024-06-02') },
+            { from: "MTY", to: "Cavazos", color: "green", amount: 8.75, date: new Date('2024-06-03') },
+        ],
     }
 ];
 
@@ -53,5 +58,9 @@ export class SampleDataService {
 
     getLastTravelRoute(userId: string): { from: string; to: string; color: string } {
         return mockConsumptionData[0].lastTravelRoute || { from: "", to: "", color: "" };
+    }
+
+    getTravelHistory(userId: string): { from: string; to: string; color: string; amount: number; date: Date }[] {
+        return mockConsumptionData[0].travelHistory || [];
     }
 }
